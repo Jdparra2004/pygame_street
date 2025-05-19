@@ -7,16 +7,16 @@ from game import *
     
 
 if __name__ == "__main__":    
-    print('loading...')
+    print('Cargando...')
     pygame.init()
     pygame.mixer.init()
     screen = pygame.display.set_mode((320, 240), 0, 32)
-    pygame.display.set_caption("charSelect") # program title
+    pygame.display.set_caption("charSelect") # titulo del programa
     
     config = config.OptionConfig()
-    print('Loading all...')
+    print('Carga total...')
     for name in getCharList():
-        print('loading', name+'...')
+        print('cargando', name+'...')
         char = Player(name, 120, 100, alt_color = False)
         altchar = Player(name, 120, 100, alt_color = True)
         print(name, 'ok')

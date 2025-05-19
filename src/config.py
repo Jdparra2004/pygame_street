@@ -13,7 +13,7 @@ class  Screen(object):
         return cls.instance
     
     def init(self, video):
-        print("initialising screen...")
+        print("Iniciando Pantalla...")
         self.video = video
         if self.video == 0:
             self.screen = pygame.display.set_mode((320, 240), 0, 32)
@@ -27,7 +27,7 @@ class  Screen(object):
             self.screen = pygame.display.set_mode((1280, 960), 0, 32)
         elif self.video == 8:
             self.screen = pygame.display.set_mode((320, 240), pygame.FULLSCREEN, 32)
-        pygame.display.set_caption("StreetPyghter")
+        pygame.display.set_caption("StreetFighter")
         
     def display_update(self, screen):
         
@@ -65,7 +65,7 @@ class SoundPlayer:
     def __new__(cls): 
         "méthode de construction standard en Python"
         if cls.instance is None:
-            print('creating SoundPlayer')
+            print('Creando Sonido de Jugador')
             cls.instance = object.__new__(cls)
             vol_config = OptionConfig()
             cls.music_vol = vol_config.music*0.1
